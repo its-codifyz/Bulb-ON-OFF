@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <style>
+     body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: black; */
+     }
+     img{
+        width: 200px;
+        height: 300px;
+     }
+     input[type="button"]{
+        padding: 10px 20px;
+        font-size: 25px;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgb(0, 255, 0);
+        cursor: pointer;
+        transition: 0.5s;
+     }
+     #off{
+        background-color: red;
+     }
+     input[type="button"]:active{
+        transform: scale(0.9);
+     }
+
+    </style>
+</head>
+<body>
+
+<div class="content">
+<img id="bulb" src="bulb-off.png" alt=""> <br><br>
+<input type="button" onclick="myfunon()"  id="on" value="ON">  
+<input type="button" onclick="myfunoff()" id="off" value="OFF">
+</div>
+
+<script>
+function myfunon(){
+    document.getElementById("bulb").src="bulb-on.png";
+}
+function myfunoff(){
+    document.getElementById("bulb").src="bulb-off.png";
+}
+</script>
+</body>
+</html>
